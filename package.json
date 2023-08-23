@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-webapp",
+  "version": "1.0.0",
+  "description": "A Simple Node js Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Taiwo Joseph twin1405j@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mocha": "^10.2.0"
+  }
+}
