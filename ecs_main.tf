@@ -5,7 +5,7 @@ provider "aws" {
 
 # Create an ECS cluster
 resource "aws_ecs_cluster" "my_cluster" {
-  name = "titajo-ecs-cluster"  
+  name = "tito-ecs-cluster"  
 }
 
 # Create a task definition
