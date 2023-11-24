@@ -5,7 +5,7 @@ provider "aws" {
 
 # Create an ECS cluster
 resource "aws_ecs_cluster" "my_cluster" {
-  name = "tito-ecs-cluster"  
+  name = "titajo-ecs-cluster"  
 }
 
 # Create a task definition
@@ -20,7 +20,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "481195358488.dkr.ecr.us-east-1.amazonaws.com/netflix-app:latest",  
+    "image": "josepht05/titajo-docker:v1.0.0",  
     "portMappings": [
       {
         "containerPort": 80,
