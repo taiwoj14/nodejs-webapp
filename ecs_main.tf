@@ -20,7 +20,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "josepht05/titajo-docker:v1.0.0",  
+    "image": "481195358488.dkr.ecr.us-east-1.amazonaws.com/netflix-app:latest",  
     "portMappings": [
       {
         "containerPort": 80,
@@ -40,8 +40,8 @@ resource "aws_ecs_service" "my_service" {
   desired_count   = 1
   launch_type     = "FARGATE"
   network_configuration {
-    subnets          = ["subnet-0204c2e8f52616218"]  
-    security_groups  = ["sg-0411c2d2659b8478f"]      
+    subnets          = ["subnet-0e8b3d7199bf251a4"]  
+    security_groups  = ["sg-0dab44e5556cb4879"]      
     assign_public_ip = true
   }
 }
