@@ -1,11 +1,11 @@
 # Define the provider for AWS
 provider "aws" {
-  region = "eu-west-2"  
+  region = "us-east-1"  
 }
 
 # Create an ECS cluster
 resource "aws_ecs_cluster" "my_cluster" {
-  name = "karo-ecs-cluster"  
+  name = "tito-ecs-cluster"  
 }
 
 # Create a task definition
@@ -20,7 +20,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "335871625378.dkr.ecr.eu-west-2.amazonaws.com/netflix-app:latest",  
+    "image": "481195358488.dkr.ecr.us-east-1.amazonaws.com/netflix-app:latest",  
     "portMappings": [
       {
         "containerPort": 80,
@@ -40,8 +40,8 @@ resource "aws_ecs_service" "my_service" {
   desired_count   = 1
   launch_type     = "FARGATE"
   network_configuration {
-    subnets          = ["subnet-0e8b3d7199bf251a4"]  
-    security_groups  = ["sg-0dab44e5556cb4879"]      
+    subnets          = ["subnet-0204c2e8f52616218"]  
+    security_groups  = ["sg-0411c2d2659b8478f"]      
     assign_public_ip = true
   }
 }
