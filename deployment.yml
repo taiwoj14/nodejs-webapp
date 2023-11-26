@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nodesy-container
-          image: dahdohacr.azurecr.io/nodejswebapp:v1
+          image: 481195358488.dkr.ecr.us-east-1.amazonaws.com/netflix-app:latest
           ports:
             - containerPort: 3000
 ---
