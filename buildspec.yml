@@ -30,6 +30,6 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $IMAGE_REPO_NAME:$IMAGE_TAG
-      - aws eks --region us-east-1 update-kubeconfig --name joyjoy-cluster
+      - aws eks --region us-east-1 update-kubeconfig --name tahto-cluster
       - echo Push the latest image to cluster
       - kubectl apply -f deployment.yml
