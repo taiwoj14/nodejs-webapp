@@ -6,7 +6,7 @@ pipeline {
      }
     environment {
     ACR_NAME = "taiacr"
-    registyUrl = "taiacr.azurecr.io"
+    registryUrl = "taiacr.azurecr.io"
     IMAGE_NAME = "nodejswebapp"
     IMAGE_TAG = "v1.0.0"
     registryCredential  = "tai-acr"
