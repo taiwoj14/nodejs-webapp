@@ -18,20 +18,20 @@ spec:
         - name: nodesy-container
           image: 481195358488.dkr.ecr.us-east-1.amazonaws.com/nodejs-april25:latest
           ports:
-            - containerPort: 3000
+          - containerPort: 3000
             
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-name: nodesy-service
+  name: nodesy-service
 spec:
   selector:
     app: nodesy-app
   ports:
     - protocol: TCP
-      port: 3000
+      port: 80
       targetPort: 3000
   type: LoadBalancer
 
